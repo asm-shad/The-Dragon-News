@@ -1,4 +1,5 @@
 import { FaEye, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCart = ({ news }) => {
   const {
@@ -52,7 +53,9 @@ const NewsCart = ({ news }) => {
         {/* Details */}
         <p className="text-sm text-gray-600 mb-4">
           {details.length > 100 ? `${details.slice(0, 100)}...` : details}{" "}
-          <button className="text-blue-500 underline">Read More</button>
+          <Link to={`/news/${news._id}`} className="text-blue-500 underline">
+            Read More
+          </Link>
         </p>
 
         {/* Footer */}
